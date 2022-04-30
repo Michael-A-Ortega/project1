@@ -1,3 +1,4 @@
+from fileinput import filename
 import users
 import movies
 
@@ -19,10 +20,9 @@ def menu(user):
 
             elif selection == 1:
                 lst = user.get_user_watchlist()
-                if lst:
-                    print(lst)
-                else:
-                    print('Oops not watchlist found! Create one.')
+               
+                if not lst:
+                    print('\n\nOops not watchlist found! Create one.\n')
 
             elif selection == 2:
                 print("\n **Creating a new watchlist**")
@@ -37,6 +37,8 @@ def menu(user):
                         print('Invalid list name! Try again')
                     else:
                         print(edit_list)
+                        for film in watchlists[edit_list]:
+                            print('  * '+ film) 
                         action = input('Modify list add or delete: ')
                         if action == 'add':
                              movie = movies.search_movie()
@@ -46,9 +48,31 @@ def menu(user):
                             movie = input('Movie: ')
                             user.edit_watchlist('delete', movie, edit_list)
                         break
+            elif selection == 4:
+                watchlists = user.get_user_watchlist()
+                del_list = str(input('Name of list to edit: '))
+                if not del_list in watchlists:
+                    print('Invalid list name! Try again')
+                else:
+                    user.delete_list(del_list)
         except ValueError:
-            print ('\nInvalid Input!!! Choose 1 - 3\n')
+            print ('\nInvalid Input!!! Choose 1 - 5\n')
 
+def admin_menu(user):
+    print('\n***{}***'.format(user.user_name))
+    print('Add movies (1)')
+    print('Delete movies (2)')
+    print('Create new movie file (3)')
+    selection = int(input(">>>"))
+
+    if selection == 1:
+        filename = str(input('Filename: '))
+        movies.add_movies_db(filename)
+    elif selection == 2:
+        filename = str(input('Filename: '))
+        movies.del_movies_db(filename)
+    else:
+        movies.create_movie_db()
 def main():
 
     print('**Welcome to Movie Watchlist**')
@@ -56,33 +80,34 @@ def main():
     while True:
         try:
             print('\t   Log In (1)')
-            print('\tCreate Account(2)') 
-            print('\tRandom Movie (3)')
+            print('\tCreate Account(2)')
+            print('\tAdmin (3)')
+            print('\tRandom Movie (4)')
 
             selection = int(input('Chose an option from above: '))
-            if selection not in [1,2,3]:
+            if selection not in [1,2,3,4]:
                 raise(ValueError)
             break
         except ValueError:
             print ('\nInvalid Input!!! Choose 1 - 3\n')
     
     if selection == 1:
-        user = ''
+        #user = ''
         while True:
             username = input('Enter a username: ')
             password = input('Enter password: ')
             user = users.Users(username, password)
 
-            res = user.log_in()
+            res = user.log_in('u')
 
             if res == None:
                 print('\nInvalid credentials!!!! Try Again\n')
             else:
                 break
-        print('\tWELCOME {}'.format(user.user_name))
+        print('\n\t**WELCOME {}**\n'.format(user.user_name))
         menu(user)
   
-    if selection == 2:
+    elif selection == 2:
         user = ''
         while True:
             username = input('Enter a username: ')
@@ -91,5 +116,20 @@ def main():
             if user.create_user():
                 break
         menu(user)
+
+    elif selection == 3:
+        while True:
+            username = input('Enter a username: ')
+            password = input('Enter password: ')
+            user = users.Users(username, password)
+            res = user.log_in('admin')
+            if res == None:
+                print('\nInvalid credentials!!!! Try Again\n')
+            else:
+                break
+        admin_menu(user)
+    else:
+        movies.get_random_movie()
+        
 if __name__ == '__main__':
     main()
