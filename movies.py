@@ -42,6 +42,7 @@ def del_movies_db(filename):
     except e:
         print(e)
         print('Oops something went wrong')
+        
 def get_random_movie():
     query = [{'$sample': {'size': 1}}]
     res = collection_movies.aggregate(query)

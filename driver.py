@@ -5,48 +5,63 @@ import movies
 def menu(user):
     while True:
         try:
-            print('Show watchlists (1)')
-            print('Create a new watchlist (2)')
-            print('Edit watchlists (3)')
-            print('Remove watchlist (4)')
-            print('Quit (5)')
+            print('\tShow watchlists (1)')
+            print('    Create a new watchlist (2)')
+            print('\tEdit watchlists (3)')
+            print('\tRemove watchlist (4)')
+            print('\t    Quit (5)')
             selection = int(input('Chose an option from above: '))
             if selection not in [1,2,3,4,5]:
                 raise(ValueError)
 
             if selection == 5:
-                print('Goodbye ' + user.user_name)
+                print('\t***Goodbye ' + user.user_name +'***')
                 break
 
             elif selection == 1:
                 lst = user.get_user_watchlist()
                
                 if not lst:
-                    print('\n\nOops not watchlist found! Create one.\n')
+                    print('\n\n\tOops no watchlist found! Create one.\n')
 
             elif selection == 2:
-                print("\n **Creating a new watchlist**")
+                print("\n\t**Creating a new watchlist**")
                 listname = str(input('Name of the list: '))
                 user.create_user_watchlist(listname)
 
             elif selection == 3:
-                watchlists = user.get_user_watchlist()
+                
                 while True:
+                    
+                    watchlists = user.get_user_watchlist()
+                    if not watchlists:
+                        print('\n\n\tOops no watchlist found! Create one.\n')
+                        break
                     edit_list = str(input('Name of list to edit: '))
                     if not edit_list in watchlists:
                         print('Invalid list name! Try again')
                     else:
-                        print(edit_list)
+
+                        print("\t    ***"+edit_list+"***")
                         for film in watchlists[edit_list]:
-                            print('  * '+ film) 
-                        action = input('Modify list add or delete: ')
-                        if action == 'add':
-                             movie = movies.search_movie()
-                             a = input('Do you want to add {} yes/no? >>'.format(movie))
-                             user.edit_watchlist('add', movie, edit_list)
-                        elif action == 'delete':
-                            movie = input('Movie: ')
-                            user.edit_watchlist('delete', movie, edit_list)
+                            print('  * '+ film)
+
+                        while True:
+                            action = str(input('\nModify list add or delete or quit: '))
+                            if action in ['add', 'delete', 'del', 'quit', 'q']:
+                                if action.lower() == 'add':
+                                    movie = movies.search_movie()
+                                    a = input('Do you want to add {} yes/no? >>'.format(movie))
+                                    if a == 'yes':
+                                        user.edit_watchlist('add', movie, edit_list)
+                                elif action.lower() == 'delete' or action.lower() == 'del':
+                                    movie = input('Movie: ')
+                                    user.edit_watchlist('delete', movie, edit_list)
+
+                                elif action.lower() == 'quit' or action.lower() == 'q':
+                                    break
+                            else:
+                                print('Oops invalid input!!!!')
                         break
             elif selection == 4:
                 watchlists = user.get_user_watchlist()
@@ -81,7 +96,7 @@ def main():
         try:
             print('\t   Log In (1)')
             print('\tCreate Account(2)')
-            print('\tAdmin (3)')
+            print('\t   Admin (3)')
             print('\tRandom Movie (4)')
 
             selection = int(input('Chose an option from above: '))

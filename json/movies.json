@@ -40,142 +40,41 @@
         "Response": "True"
     },
     {
-        "Title": "Jackass",
-        "Year": "2000\u20132007",
-        "Rated": "TV-MA",
-        "Released": "01 Oct 2000",
-        "Runtime": "535 min",
-        "Genre": "Action, Comedy, Reality-TV",
-        "Director": "N/A",
-        "Writer": "Spike Jonze, Johnny Knoxville, Jeff Tremaine",
-        "Actors": "Johnny Knoxville, Bam Margera, Chris Pontius",
-        "Plot": "The cast performs various crazy stunts for our amusement.",
+        "Title": "Toy Story",
+        "Year": "1995",
+        "Rated": "G",
+        "Released": "22 Nov 1995",
+        "Runtime": "81 min",
+        "Genre": "Animation, Adventure, Comedy",
+        "Director": "John Lasseter",
+        "Writer": "John Lasseter, Pete Docter, Andrew Stanton",
+        "Actors": "Tom Hanks, Tim Allen, Don Rickles",
+        "Plot": "A cowboy doll is profoundly threatened and jealous when a new spaceman figure supplants him as top toy in a boy's room.",
         "Language": "English",
         "Country": "United States",
-        "Awards": "2 nominations",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMTczNjE5MzM3OV5BMl5BanBnXkFtZTcwNTI0MDQzMQ@@._V1_SX300.jpg",
+        "Awards": "Nominated for 3 Oscars. 27 wins & 23 nominations total",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_SX300.jpg",
         "Ratings": [
             {
                 "Source": "Internet Movie Database",
-                "Value": "7.3/10"
-            }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "7.3",
-        "imdbVotes": "24,687",
-        "imdbID": "tt0264263",
-        "Type": "series",
-        "totalSeasons": "3",
-        "Response": "True"
-    },
-    {
-        "Title": "Halloween",
-        "Year": "1978",
-        "Rated": "R",
-        "Released": "27 Oct 1978",
-        "Runtime": "91 min",
-        "Genre": "Horror, Thriller",
-        "Director": "John Carpenter",
-        "Writer": "John Carpenter, Debra Hill",
-        "Actors": "Donald Pleasence, Jamie Lee Curtis, Tony Moran",
-        "Plot": "Fifteen years after murdering his sister on Halloween night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois to kill again.",
-        "Language": "English",
-        "Country": "United States",
-        "Awards": "7 wins & 3 nominations",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNzk1OGU2NmMtNTdhZC00NjdlLWE5YTMtZTQ0MGExZTQzOGQyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-        "Ratings": [
-            {
-                "Source": "Internet Movie Database",
-                "Value": "7.7/10"
+                "Value": "8.3/10"
             },
             {
                 "Source": "Rotten Tomatoes",
-                "Value": "96%"
+                "Value": "100%"
             },
             {
                 "Source": "Metacritic",
-                "Value": "87/100"
+                "Value": "95/100"
             }
         ],
-        "Metascore": "87",
-        "imdbRating": "7.7",
-        "imdbVotes": "265,289",
-        "imdbID": "tt0077651",
+        "Metascore": "95",
+        "imdbRating": "8.3",
+        "imdbVotes": "960,910",
+        "imdbID": "tt0114709",
         "Type": "movie",
-        "DVD": "28 Sep 1999",
-        "BoxOffice": "$47,160,000",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-    },
-    {
-        "Title": "Spiderman",
-        "Year": "1990",
-        "Rated": "N/A",
-        "Released": "N/A",
-        "Runtime": "5 min",
-        "Genre": "Short",
-        "Director": "Christian Davi",
-        "Writer": "N/A",
-        "Actors": "N/A",
-        "Plot": "N/A",
-        "Language": "German",
-        "Country": "Switzerland",
-        "Awards": "N/A",
-        "Poster": "N/A",
-        "Ratings": [
-            {
-                "Source": "Internet Movie Database",
-                "Value": "5.6/10"
-            }
-        ],
-        "Metascore": "N/A",
-        "imdbRating": "5.6",
-        "imdbVotes": "96",
-        "imdbID": "tt0100669",
-        "Type": "movie",
-        "DVD": "N/A",
-        "BoxOffice": "N/A",
-        "Production": "N/A",
-        "Website": "N/A",
-        "Response": "True"
-    },
-    {
-        "Title": "Project X",
-        "Year": "2012",
-        "Rated": "R",
-        "Released": "02 Mar 2012",
-        "Runtime": "88 min",
-        "Genre": "Comedy",
-        "Director": "Nima Nourizadeh",
-        "Writer": "Matt Drake, Michael Bacall",
-        "Actors": "Thomas Mann, Oliver Cooper, Jonathan Daniel Brown",
-        "Plot": "3 high school seniors throw a birthday party to make a name for themselves. As the night progresses, things spiral out of control as word of the party spreads.",
-        "Language": "English",
-        "Country": "United States",
-        "Awards": "5 nominations",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMTc1MTk0Njg4OF5BMl5BanBnXkFtZTcwODc0ODkyNw@@._V1_SX300.jpg",
-        "Ratings": [
-            {
-                "Source": "Internet Movie Database",
-                "Value": "6.7/10"
-            },
-            {
-                "Source": "Rotten Tomatoes",
-                "Value": "28%"
-            },
-            {
-                "Source": "Metacritic",
-                "Value": "48/100"
-            }
-        ],
-        "Metascore": "48",
-        "imdbRating": "6.7",
-        "imdbVotes": "204,591",
-        "imdbID": "tt1636826",
-        "Type": "movie",
-        "DVD": "19 Jun 2012",
-        "BoxOffice": "$54,731,865",
+        "DVD": "23 Mar 2010",
+        "BoxOffice": "$223,225,679",
         "Production": "N/A",
         "Website": "N/A",
         "Response": "True"

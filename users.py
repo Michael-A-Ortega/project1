@@ -33,11 +33,11 @@ class Users:
         if 'watchlist' in list(res):
             if len(res['watchlist']):
                 usersList = {}
-                print('*****WATCHLIST*****\n')
+                print('\t***** WATCHLIST *****\n')
                 for watchlists in res['watchlist']:
-                    print(' * '+watchlists['name'])
+                    print(' \t  * '+watchlists['name'])
                     usersList[watchlists['name']] = watchlists['list']
-                print('*****END*****\n')
+                print('\n\t******* END *******\n')
                 return usersList    
         return 0
     def create_user_watchlist(self, listname):
