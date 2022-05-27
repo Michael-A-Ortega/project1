@@ -21,3 +21,17 @@
 05/06/2022 09:37:28 AM Users failed to loggin. Invalid credentials
 05/06/2022 10:55:22 AM USER: asfka failed to login. Invalid credentials
 05/06/2022 10:55:33 AM USER: mike failed to login. Invalid credentials
+05/26/2022 09:13:15 PM Users failed to loggin. Invalid credentials
+05/26/2022 09:13:19 PM Users failed to loggin. Invalid credentials
+05/26/2022 09:14:30 PM Starting new HTTP connection (1): www.omdbapi.com:80
+05/26/2022 09:14:30 PM http://www.omdbapi.com:80 "GET /?apikey=%7Bapi_key%7D=Alone HTTP/1.1" 401 47
+05/26/2022 09:14:49 PM Starting new HTTP connection (1): www.omdbapi.com:80
+05/26/2022 09:14:49 PM http://www.omdbapi.com:80 "GET /?apikey=%7Bapi_key%7D=Faster HTTP/1.1" 401 47
+05/26/2022 09:14:59 PM Starting new HTTP connection (1): www.omdbapi.com:80
+05/26/2022 09:14:59 PM http://www.omdbapi.com:80 "GET /?apikey=%7Bapi_key%7D=Town HTTP/1.1" 401 47
+05/26/2022 09:16:19 PM Starting new HTTP connection (1): www.omdbapi.com:80
+05/26/2022 09:16:19 PM http://www.omdbapi.com:80 "GET /?apikey=6e1729d3&t=Town HTTP/1.1" 200 None
+05/26/2022 09:16:26 PM Starting new HTTP connection (1): www.omdbapi.com:80
+05/26/2022 09:16:26 PM http://www.omdbapi.com:80 "GET /?apikey=6e1729d3&t=Faster HTTP/1.1" 200 None
+05/26/2022 09:16:35 PM Starting new HTTP connection (1): www.omdbapi.com:80
+05/26/2022 09:16:35 PM http://www.omdbapi.com:80 "GET /?apikey=6e1729d3&t=Buried HTTP/1.1" 200 None

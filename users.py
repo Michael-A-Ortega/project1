@@ -64,7 +64,7 @@ def edit_watchlist(username, action, movie, lst_name):
 def delete_list(username, lst_name):
     filterDb = {'username': username, 'watchlist' : { '$elemMatch': {'name': lst_name}}}
     res = users_collection.update_one(filterDb, {'$pull': {'watchlist': {'name': lst_name}}})
-    print(res.modified_count)
+    
    
         
         

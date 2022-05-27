@@ -6,8 +6,9 @@ import requests as re
 client = MongoClient()
 db = client['project1']
 collection_movies = db.movies
-
+api_key = "YOUR_API_KEY_HERE"
 #search for movie in db if found movie detials are returned else None is returned
+
 def search_movie():
     movie = str(input('Search Movie: '))
     data = collection_movies.find_one({'Title' : {'$regex': movie, '$options': 'i'}})
@@ -60,7 +61,7 @@ def get_random_movie():
 #request movie from api and return results
 def movie_search_api():
     query = input("Search movie: ")
-    url = "http://www.omdbapi.com/?apikey=6e1729d3&t="+query
+    url = f"http://www.omdbapi.com/?apikey={api_key}="+query
     req = re.get(url)
     movie = req.json()
 
